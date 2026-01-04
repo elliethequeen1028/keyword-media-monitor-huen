@@ -1,0 +1,15 @@
+# Python:
+
+## Poetry lock file and cache:
+.poetry
+poetry.lock
+
+## Pyinstaller build:
+build
+dist
+**/*.spec
+
+## Python (and test) cache:
+**/__pycache__
+**/.mypy_cache
+**/.pytest-cache

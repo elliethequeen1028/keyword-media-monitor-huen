@@ -1,0 +1,66 @@
+[project]
+name = "keyword-media-monitor-huen"
+version = "0.0.1"
+description = "A lightweight keyword-based web content monitoring tool that periodically collects articles and posts from specified websites for manual review and future NLP analysis"
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+
+authors = [
+    { name = "Jiawei Yu", email = "sample.text@address.ext" }
+]
+
+keywords = [
+    "open-source"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Information Technology",
+    "Operating System :: POSIX :: Linux",
+    "Operating System :: Unix",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
+
+dependencies = [
+    "crawlee[playwright]",
+    "strictyaml"
+]
+
+[project.urls]
+repository = "https://github.com/elliethequeen1028/keyword-media-monitor-huen"
+
+
+
+# Standalone config:
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+
+# Poetry config:
+
+[tool.poetry]
+requires-poetry = ">=2.0"
+
+packages = [
+    { include = "keyword-media-monitor-huen" }
+]
+
+[tool.poetry.requires-plugins]
+poethepoet = "^0.34.0"
+
+
+
+# Poe-the-poet config:
+
+[tool.poe]
+default_task_type = "script"
+
+[tool.poe.tasks]
+test-sample-config = { script = "keyword_media_monitor_huen.cli:cli -c tests/sample-config.yml", help = "Test monitor running on a sample configuration file" }
