@@ -13,3 +13,6 @@ dist
 **/__pycache__
 **/.mypy_cache
 **/.pytest-cache
+
+## Crawling data storage:
+storage
