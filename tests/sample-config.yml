@@ -1,0 +1,30 @@
+targets:
+  - name: "Crawlee Docs"
+    base_url: "https://crawlee.dev"
+    type: "news"
+
+keywords:
+  primary:
+    - "crawlee"
+    - "playwright"
+  secondary:
+    - "scraping"
+    - "automation"
+
+languages:
+  - "en"
+
+schedule:
+  interval_minutes: 60
+
+storage:
+  type: "local"
+  path: "./data"
+  format: "json"
+
+retention:
+  cleanup_cycle_days: 30
+
+alerts:
+  enabled: false
+  method: "email"
